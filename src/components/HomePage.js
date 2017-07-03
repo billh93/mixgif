@@ -1,19 +1,40 @@
 import React, {Component} from 'react';
-import {Container, Grid, Image} from 'semantic-ui-react';
+import {Container, Grid, Image, Button, Dimmer, Header} from 'semantic-ui-react';
 
-const Images = () => (
-  <Image
-    src='http://via.placeholder.com/250x250'
-    as='a'
-    size='medium'
-    href='#'
-  />
-)
+class Images extends Component {
+  state = {}
+
+  handleShow = () => this.setState({ active: true })
+  handleHide = () => this.setState({ active: false })
+
+  render() {
+    const { active } = this.state
+    const content = (
+      <div>
+        <Header as='h2' inverted>Title</Header>
+
+        <Button primary>Add</Button>
+        <Button>View</Button>
+      </div>
+    )
+
+    return (
+      <Dimmer.Dimmable
+        as={Image}
+        dimmed={active}
+        dimmer={{ active, content }}
+        onMouseEnter={this.handleShow}
+        onMouseLeave={this.handleHide}
+        size='medium'
+        src='http://via.placeholder.com/250x250'
+      />
+    )
+  }
+}
 
 export default class HomePage extends Component {
     render() {
         return (
-            <div>
             <Container fluid>
                 <Grid centered>
                     <Grid.Row column={5}>
@@ -26,7 +47,6 @@ export default class HomePage extends Component {
                     </Grid.Row>
                 </Grid>
             </Container>
-            </div>
         );
     }
 }
