@@ -1,40 +1,75 @@
 import React, {Component} from 'react';
-import {Grid, Segment, Container, Header, Image} from 'semantic-ui-react'
+import {Grid, Segment, Container, Header, Image, Icon, List} from 'semantic-ui-react'
 import MySelf from 'images/me.jpg';
+import {Images} from 'components/HomePage';
+import 'containers/App.css';
 
-class UserHeaderContainer extends Component {
+class UserInfoContainer extends Component {
     render() {
         return (
             <Container fluid>
                 <Grid centered>
-                    <Grid.Column mobile={12} tablet={12} computer={12}>
-                        <Segment padded='very'>
-                            <UserHeader />
-                        </Segment>
-                    </Grid.Column>
+                    <UserInfo/>
+                    <UserGifs />
                 </Grid>
             </Container>
         );
     }
 }
 
-class UserHeader extends Component {
+class UserInfo extends Component {
     render() {
         return (
-            <div>
-                <Image centered src={MySelf} size='medium' shape='circular' />
-                <Header as='h1' icon textAlign='center'>
-                    <Header.Content>
-                        Bill Hinostroza
-                    </Header.Content>
-                </Header>
-            </div>
+            <Grid.Column mobile={14} tablet={13} computer={4} largeScreen={6}>
+                <Segment textAlign='center'>
+                    <Image centered src={MySelf} size='medium' shape='circular'/>
+                    <Header as='h1' icon textAlign='center'>
+                        <Header.Content>
+                            Bill Hinostroza
+                        </Header.Content>
+                    </Header>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                     sed do eiusmod tempor incididunt ut labore et dolore magna
+                     aliqua.</p>
+                     <List horizontal>
+                        <List.Item>
+                            <Icon link="http://fb.com/djhiphop23" name="facebook" size="huge"/>
+                        </List.Item>
+                        <List.Item>
+                            <Icon link="#" name="instagram" size="huge"/>
+                        </List.Item>
+                        <List.Item>
+                            <Icon link="#" name="reddit square" size="huge"/>
+                        </List.Item>
+                    </List>
+                </Segment>
+            </Grid.Column>
+        );
+    }
+}
+
+class UserGifs extends Component {
+    render() {
+        return (
+            <Grid.Column mobile={14} tablet={15} computer={11} largeScreen={9}>
+                <Segment padded="very" textAlign="center">
+                    <Header size='huge'>My Gifs</Header>
+                    <Grid.Row>
+                        <Image.Group size='medium'>
+                          <Images />
+                          <Images />
+                          <Images />
+                          <Images />
+                        </Image.Group>
+                    </Grid.Row>
+                </Segment>
+            </Grid.Column>
         );
     }
 }
 
 export default class UserProfile extends Component {
     render() {
-        return (<UserHeaderContainer/>);
+        return (<UserInfoContainer/>);
     }
 }

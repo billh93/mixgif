@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
-import { Button, Dropdown, Menu } from 'semantic-ui-react'
+import { Button, Dropdown, Menu, Input } from 'semantic-ui-react'
 
 export default class NavBar extends Component {
-  state = { activeItem: 'home' }
+  state = { activeItem: 'MixGif' }
 
   handleItemClick = (e, { name }) => this.setState({ activeItem: name })
 
@@ -10,23 +10,30 @@ export default class NavBar extends Component {
     const { activeItem } = this.state
 
     return (
-      <Menu inverted size='large'>
-        <Menu.Item name='home' active={activeItem === 'home'} onClick={this.handleItemClick} />
-        <Menu.Item name='messages' active={activeItem === 'messages'} onClick={this.handleItemClick} />
+      <Menu inverted stackable size='large'>
+      <Dropdown item text='MixGif' name="MixGif" active={activeItem === 'MixGif'} onClick={this.handleItemClick} >
+        <Dropdown.Menu>
+          <Dropdown.Item>About</Dropdown.Item>
+          <Dropdown.Item>Advertise</Dropdown.Item>
+          <Dropdown.Item>Contact Us</Dropdown.Item>
+        </Dropdown.Menu>
+      </Dropdown>
 
         <Menu.Menu position='right'>
-          <Dropdown item text='Language'>
-            <Dropdown.Menu>
-              <Dropdown.Item>English</Dropdown.Item>
-              <Dropdown.Item>Russian</Dropdown.Item>
-              <Dropdown.Item>Spanish</Dropdown.Item>
-            </Dropdown.Menu>
-          </Dropdown>
-
           <Menu.Item>
-            <Button primary>Sign Up</Button>
+            <Input className='icon' icon='search' placeholder='Search...' />
           </Menu.Item>
         </Menu.Menu>
+        <Dropdown item text='Languages'>
+          <Dropdown.Menu>
+            <Dropdown.Item>English</Dropdown.Item>
+            <Dropdown.Item>Russian</Dropdown.Item>
+            <Dropdown.Item>Spanish</Dropdown.Item>
+          </Dropdown.Menu>
+        </Dropdown>
+        <Menu.Item>
+          <Button primary>Sign Up</Button>
+        </Menu.Item>
       </Menu>
     )
   }

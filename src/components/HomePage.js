@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {Container, Grid, Image, Button, Dimmer, Header} from 'semantic-ui-react';
 
-class Images extends Component {
+export class Images extends Component {
   state = {}
 
   handleShow = () => this.setState({ active: true })

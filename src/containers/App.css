@@ -1,3 +1,9 @@
 .borders{
     border: 5px solid red;
 }
+/****************
+    UserProfile
+****************/
+.social-icon-color, .social-icon-color:hover{
+    color: black;
+}
