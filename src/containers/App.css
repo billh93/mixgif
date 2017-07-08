@@ -7,3 +7,11 @@
 .social-icon-color, .social-icon-color:hover{
     color: black;
 }
+
+/****************
+    Categories
+****************/
+.gifCardGroup{
+    margin-left: auto;
+    margin-right: auto;
+}

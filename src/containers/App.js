@@ -1,16 +1,13 @@
 import React, {Component} from 'react';
 import NavBar from 'components/NavBar';
-import Footer from 'components/Footer';
-import HomePage from 'components/HomePage';
-import UserProfile from 'components/UserProfile';
+import Categories from 'components/Categories';
 
 class App extends Component {
     render() {
         return (
             <div>
-                <NavBar/>
-                <UserProfile/>
-                <Footer/>
+                <NavBar />
+                <Categories />
             </div>
         );
     }

@@ -1,16 +1,24 @@
 import React, {Component} from 'react';
-import {Grid, Segment, Container, Header, Image, Icon, List} from 'semantic-ui-react'
+import {
+    Grid,
+    Segment,
+    Container,
+    Header,
+    Image,
+    Icon,
+    List
+} from 'semantic-ui-react'
 import MySelf from 'images/me.jpg';
 import {Images} from 'components/HomePage';
 import 'containers/App.css';
 
-class UserInfoContainer extends Component {
+export default class UserProfileContainer extends Component {
     render() {
         return (
             <Container fluid>
                 <Grid centered>
                     <UserInfo/>
-                    <UserGifs />
+                    <UserGifs/>
                 </Grid>
             </Container>
         );
@@ -28,10 +36,8 @@ class UserInfo extends Component {
                             Bill Hinostroza
                         </Header.Content>
                     </Header>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-                     sed do eiusmod tempor incididunt ut labore et dolore magna
-                     aliqua.</p>
-                     <List horizontal>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <List horizontal>
                         <List.Item>
                             <Icon link="http://fb.com/djhiphop23" name="facebook" size="huge"/>
                         </List.Item>
@@ -56,20 +62,14 @@ class UserGifs extends Component {
                     <Header size='huge'>My Gifs</Header>
                     <Grid.Row>
                         <Image.Group size='medium'>
-                          <Images />
-                          <Images />
-                          <Images />
-                          <Images />
+                            <Images/>
+                            <Images/>
+                            <Images/>
+                            <Images/>
                         </Image.Group>
                     </Grid.Row>
                 </Segment>
             </Grid.Column>
         );
-    }
-}
-
-export default class UserProfile extends Component {
-    render() {
-        return (<UserInfoContainer/>);
     }
 }

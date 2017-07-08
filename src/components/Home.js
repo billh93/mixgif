@@ -32,12 +32,12 @@ export class Images extends Component {
   }
 }
 
-export default class HomePage extends Component {
+export default class Home extends Component {
     render() {
         return (
             <Container fluid>
                 <Grid centered>
-                    <Grid.Row column={5}>
+                    <Grid.Row>
                         <Image.Group size='medium'>
                           <Images />
                           <Images />
