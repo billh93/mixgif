@@ -20,6 +20,13 @@ export default class NavBar extends Component {
                         <Dropdown.Item>Contact Us</Dropdown.Item>
                     </Dropdown.Menu>
                 </Dropdown>
+                <Dropdown item text='Categories' name="Categories" active={activeItem === 'Categories'} onClick={this.handleItemClick}>
+                    <Dropdown.Menu>
+                        <Dropdown.Item>About</Dropdown.Item>
+                        <Dropdown.Item>Advertise</Dropdown.Item>
+                        <Dropdown.Item>Contact Us</Dropdown.Item>
+                    </Dropdown.Menu>
+                </Dropdown>
 
                 <Menu.Menu position='right'>
                     <Menu.Item>
