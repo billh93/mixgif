@@ -33,11 +33,11 @@ export default class NavBar extends Component {
                         <Input className='icon' icon='search' placeholder='Search...'/>
                     </Menu.Item>
                 </Menu.Menu>
-                <Dropdown item text='Languages'>
+                <Dropdown item text='Bill'>
                     <Dropdown.Menu>
-                        <Dropdown.Item>English</Dropdown.Item>
-                        <Dropdown.Item>Russian</Dropdown.Item>
-                        <Dropdown.Item>Spanish</Dropdown.Item>
+                        <Dropdown.Item>Profile</Dropdown.Item>
+                        <Dropdown.Item>Settings</Dropdown.Item>
+                        <Dropdown.Item>Log Out</Dropdown.Item>
                     </Dropdown.Menu>
                 </Dropdown>
                 <Menu.Item>
