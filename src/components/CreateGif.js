@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Container, Message, Form, Button, Grid, Icon, Dropdown} from 'semantic-ui-react';
+import {Container, Message, Form, Button, Grid} from 'semantic-ui-react';
 
 export default class CreateGifContainer extends Component {
     render() {
@@ -24,19 +24,25 @@ class CreateGif extends Component {
             <Grid.Column mobile={14} tablet={13} computer={8} largeScreen={6}>
                 <Message
                   attached
-                  header='Welcome to our site!'
-                  content='Fill out the form below to sign-up for a new account'
+                  header='Create Your Gif'
+                  content='Earn some snazzy rep with the MixGif Community!'
                 />
                 <Form className='attached fluid segment'>
-                  <Form.Input label='Title' placeholder='Title' type='text' />
-                  <Form.TextArea label='Description' placeholder='Please describe your gif' />
-                  <Form.Dropdown placeholder='Select you Category' fluid selection options={categoryOptions} />
-                  <Button color='blue'>Sign Up</Button>
+                  <Form.Input label="Title" placeholder='Title' type='text' />
+                  <Form.TextArea label="Description" placeholder='Please Describe Your Gif' />
+                  <Form.Dropdown label="Category" placeholder='Select Your Category' fluid selection options={categoryOptions} />
+                  <Form.Input label="Upload Gif" type='file' />
+                  <Form.Input label="Upload Sound" type='file' />
+                  <Message
+                      header="Gif & Sound Requirements"
+                      list={[
+                        'Gif must only be in .gif file format',
+                        'Sound should only be 30 seconds long',
+                        'Sound must be in .mp3 file audio format'
+                      ]}
+                    />
+                  <Button color="blue">Create</Button>
                 </Form>
-                <Message attached='bottom' warning>
-                  <Icon name='help' />
-                  Already signed up?&nbsp;<a href='#'>Login here</a>&nbsp;instead.
-                </Message>
             </Grid.Column>
         );
     }
