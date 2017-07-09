@@ -1,13 +1,13 @@
 import React, {Component} from 'react';
 import NavBar from 'components/NavBar';
-import CreateGifContainer from 'components/CreateGif';
+import GifContainer from 'components/Gif';
 
 class App extends Component {
     render() {
         return (
             <div>
                 <NavBar />
-                <CreateGifContainer />
+                <GifContainer />
             </div>
         );
     }

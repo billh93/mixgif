@@ -9,7 +9,7 @@ import {
     List
 } from 'semantic-ui-react'
 import MySelf from 'images/me.jpg';
-import {Images} from 'components/HomePage';
+import {Images} from 'components/Home';
 import 'containers/App.css';
 
 export default class UserProfileContainer extends Component {
