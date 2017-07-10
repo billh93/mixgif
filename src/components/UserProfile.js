@@ -12,7 +12,7 @@ import MySelf from 'images/me.jpg';
 import {Images} from 'components/Home';
 import 'containers/App.css';
 
-export default class UserProfileContainer extends Component {
+export default class UserProfile extends Component {
     render() {
         return (
             <Container fluid>

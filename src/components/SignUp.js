@@ -1,21 +1,11 @@
 import React, {Component} from 'react';
 import {Container, Message, Form, Button, Grid, Icon} from 'semantic-ui-react';
 
-export default class SignUpContainer extends Component {
-    render() {
-        return(
-            <Container fluid>
-                <Grid centered>
-                    <SignUp/>
-                </Grid>
-            </Container>
-        );
-    }
-}
-
-class SignUp extends Component {
+export default class SignUp extends Component {
     render() {
         return (
+            <Container fluid>
+                <Grid centered>
             <Grid.Column mobile={14} tablet={13} computer={8} largeScreen={6}>
                 <Message
                   attached
@@ -33,6 +23,8 @@ class SignUp extends Component {
                   Already signed up?&nbsp;<a href='#'>Login here</a>&nbsp;instead.
                 </Message>
             </Grid.Column>
+            </Grid>
+        </Container>
         );
     }
 }

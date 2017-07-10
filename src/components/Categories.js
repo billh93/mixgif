@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Container, Grid, Card} from 'semantic-ui-react';
+import {Grid, Card} from 'semantic-ui-react';
 
 export default class Categories extends Component {
     render() {

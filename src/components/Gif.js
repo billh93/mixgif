@@ -132,7 +132,7 @@ const SocialButtons = (
     </Grid>
 )
 
-export default class GifContainer extends Component {
+export default class Gif extends Component {
     handleNewComment(comment) {
         console.log(comment.text);
     }
