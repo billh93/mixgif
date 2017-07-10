@@ -16,8 +16,15 @@ export default class NavBar extends Component {
                 <Dropdown item text='MixGif' name="MixGif" active={activeItem === 'MixGif'} onClick={this.handleItemClick}>
                     <Dropdown.Menu>
                         <Dropdown.Item>About</Dropdown.Item>
+                        <Dropdown.Item>Blog</Dropdown.Item>
                         <Dropdown.Item>Advertise</Dropdown.Item>
+                        <Dropdown.Item>Privacy Policy</Dropdown.Item>
+                        <Dropdown.Item>Terms Of Service</Dropdown.Item>
                         <Dropdown.Item>Contact Us</Dropdown.Item>
+                        <Dropdown.Item>
+                            <a target="_blank" rel="noopener noreferrer" href="http://fb.com/djhiphop23"><Button circular color='facebook' icon='facebook' /></a>
+                            <a target="_blank" rel="noopener noreferrer" href="http://twitter.com/djhiphop23"><Button circular color='twitter' icon='twitter' /></a>
+                        </Dropdown.Item>
                     </Dropdown.Menu>
                 </Dropdown>
                 <Dropdown item text='Categories' name="Categories" active={activeItem === 'Categories'} onClick={this.handleItemClick}>
