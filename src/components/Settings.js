@@ -5,9 +5,9 @@ import {
     Form,
     Button,
     Grid,
-    Icon,
     Image
 } from 'semantic-ui-react';
+import {Link} from 'react-router-dom';
 import MySelf from 'images/me.jpg';
 
 export default class Settings extends Component {
@@ -33,7 +33,7 @@ export default class Settings extends Component {
                                 <Form.Radio label='Male' value='m' checked={value === 'm'} onChange={this.handleChange}/>
                                 <Form.Radio label='Female' value='f' checked={value === 'f'} onChange={this.handleChange}/>
                             </Form.Group>
-                            <a href="#"><Button content="Change Password"/></a>
+                            <Button as={Link} to="/change-password" content="Change Password"/>
                             <br/>
                             <br/>
                             <Form.Group grouped>

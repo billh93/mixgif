@@ -4,8 +4,7 @@ import {
     Message,
     Form,
     Button,
-    Grid,
-    Icon
+    Grid
 } from 'semantic-ui-react';
 
 export default class ChangePassword extends Component {
