@@ -45,6 +45,9 @@ class UserInfo extends Component {
                             <Icon link="#" name="instagram" size="huge"/>
                         </List.Item>
                         <List.Item>
+                            <Icon link="#" name="twitter square" size="huge"/>
+                        </List.Item>
+                        <List.Item>
                             <Icon link="#" name="reddit square" size="huge"/>
                         </List.Item>
                     </List>

@@ -1,13 +1,13 @@
 import React, {Component} from 'react';
 import NavBar from 'components/NavBar';
-import GifContainer from 'components/Gif';
+import UserProfileContainer from 'components/UserProfile';
 
 class App extends Component {
     render() {
         return (
             <div>
                 <NavBar />
-                <GifContainer />
+                <UserProfileContainer />
             </div>
         );
     }
