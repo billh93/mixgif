@@ -34,7 +34,7 @@ class App extends Component {
                         <Route exact path="/change-password" render={() => <ChangePassword/>}/>
                         <Route exact path="/forgot-password" render={() => <ForgotPassword/>}/>
                         <Route exact path="/create" render={() => <CreateGif/>}/>
-                        <Route exact path="/gif/:id" render={() => <Gif/>}/>
+                        <Route exact path="/gif/:id" render={(props) => <Gif {...props} />}/>
                         <Route exact path="/login" render={() => <LogIn/>}/>
                         <Route exact path="/signup" render={() => <SignUp/>}/>
                         <Route exact path="/user/:username" render={(props) => <UserProfile {...props} />}/>

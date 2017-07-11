@@ -137,7 +137,8 @@ export default class Gif extends Component {
         console.log(comment.text);
     }
 
-    render() {
+    render(props) {
+        let gifId = this.props.match.params.id;
         return(
             <Grid centered>
                 <Grid.Column mobile={12} tablet={10} computer={7} largeScreen={7}>
@@ -145,6 +146,7 @@ export default class Gif extends Component {
                     <Header as='h2' icon textAlign='center'>
                       <Header.Content>
                         Bill Hinostroza
+                        {gifId}
                       </Header.Content>
                     </Header>
                     <Card
