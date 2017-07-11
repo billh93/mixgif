@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {BrowserRouter, Route} from 'react-router-dom';
+import {BrowserRouter, Route, Switch} from 'react-router-dom';
 
 // App Components
 import NavBar from 'components/NavBar';
@@ -18,6 +18,7 @@ import Advertise from 'components/Advertise';
 import Privacy from 'components/Privacy';
 import Terms from 'components/Terms';
 import About from 'components/About';
+import NotFound from 'components/NotFound';
 
 
 class App extends Component {
@@ -26,22 +27,25 @@ class App extends Component {
             <BrowserRouter>
                 <div>
                     <NavBar/>
-                    <Route exact path="/" render={() => <Home/>}/>
-                    <Route exact path="/categories" render={() => <Categories/>}/>
-                    <Route exact path="/category" render={() => <Category/>}/>
-                    <Route exact path="/change-password" render={() => <ChangePassword/>}/>
-                    <Route exact path="/forgot-password" render={() => <ForgotPassword/>}/>
-                    <Route exact path="/create" render={() => <CreateGif/>}/>
-                    <Route exact path="/gif" render={() => <Gif/>}/>
-                    <Route exact path="/login" render={() => <LogIn/>}/>
-                    <Route exact path="/signup" render={() => <SignUp/>}/>
-                    <Route exact path="/user" render={() => <UserProfile/>}/>
-                    <Route exact path="/settings" render={() => <Settings/>}/>
-                    <Route exact path="/about" render={() => <About/>}/>
-                    <Route path='/blog' component={() => window.location = 'https://mixgif.wordpress.com'}/>
-                    <Route exact path="/advertise" render={() => <Advertise/>}/>
-                    <Route exact path="/privacy" render={() => <Privacy/>}/>
-                    <Route exact path="/terms" render={() => <Terms/>}/>
+                    <Switch>
+                        <Route exact path="/" render={() => <Home/>}/>
+                        <Route exact path="/categories" render={() => <Categories/>}/>
+                        <Route exact path="/category" render={() => <Category/>}/>
+                        <Route exact path="/change-password" render={() => <ChangePassword/>}/>
+                        <Route exact path="/forgot-password" render={() => <ForgotPassword/>}/>
+                        <Route exact path="/create" render={() => <CreateGif/>}/>
+                        <Route exact path="/gif" render={() => <Gif/>}/>
+                        <Route exact path="/login" render={() => <LogIn/>}/>
+                        <Route exact path="/signup" render={() => <SignUp/>}/>
+                        <Route exact path="/user" render={() => <UserProfile/>}/>
+                        <Route exact path="/settings" render={() => <Settings/>}/>
+                        <Route exact path="/about" render={() => <About/>}/>
+                        <Route exact path='/blog' component={() => window.location = 'https://mixgif.wordpress.com'}/>
+                        <Route exact path="/advertise" render={() => <Advertise/>}/>
+                        <Route exact path="/privacy" render={() => <Privacy/>}/>
+                        <Route exact path="/terms" render={() => <Terms/>}/>
+                        <Route component={NotFound}/>
+                    </Switch>
                 </div>
             </BrowserRouter>
         );
