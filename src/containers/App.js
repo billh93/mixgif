@@ -30,14 +30,14 @@ class App extends Component {
                     <Switch>
                         <Route exact path="/" render={() => <Home/>}/>
                         <Route exact path="/categories" render={() => <Categories/>}/>
-                        <Route exact path="/category" render={() => <Category/>}/>
+                        <Route path="/category/:category" render={(props) => <Category {...props} />}/>
                         <Route exact path="/change-password" render={() => <ChangePassword/>}/>
                         <Route exact path="/forgot-password" render={() => <ForgotPassword/>}/>
                         <Route exact path="/create" render={() => <CreateGif/>}/>
-                        <Route exact path="/gif" render={() => <Gif/>}/>
+                        <Route exact path="/gif/:id" render={() => <Gif/>}/>
                         <Route exact path="/login" render={() => <LogIn/>}/>
                         <Route exact path="/signup" render={() => <SignUp/>}/>
-                        <Route exact path="/user" render={() => <UserProfile/>}/>
+                        <Route exact path="/user/:username" render={() => <UserProfile/>}/>
                         <Route exact path="/settings" render={() => <Settings/>}/>
                         <Route exact path="/about" render={() => <About/>}/>
                         <Route exact path='/blog' component={() => window.location = 'https://mixgif.wordpress.com'}/>
