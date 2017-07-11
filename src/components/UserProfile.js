@@ -5,19 +5,20 @@ import {
     Container,
     Header,
     Image,
-    Icon,
-    List
+    List,
+    Button
 } from 'semantic-ui-react'
 import MySelf from 'images/me.jpg';
 import {Images} from 'components/Home';
 import 'containers/App.css';
 
 export default class UserProfile extends Component {
-    render() {
+    render(props) {
+        let username = this.props.match.params.username;
         return (
             <Container fluid>
                 <Grid centered>
-                    <UserInfo/>
+                    <UserInfo username={username}/>
                     <UserGifs/>
                 </Grid>
             </Container>
@@ -26,29 +27,27 @@ export default class UserProfile extends Component {
 }
 
 class UserInfo extends Component {
-    render() {
+    render(props) {
+        let username = this.props.username;
         return (
             <Grid.Column mobile={14} tablet={13} computer={4} largeScreen={6}>
                 <Segment textAlign='center'>
                     <Image centered src={MySelf} size='medium' shape='circular'/>
                     <Header as='h1' icon textAlign='center'>
                         <Header.Content>
-                            Bill Hinostroza
+                            {username}
                         </Header.Content>
                     </Header>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                     <List horizontal>
                         <List.Item>
-                            <Icon link="http://fb.com/djhiphop23" name="facebook" size="huge"/>
+                            <Button onClick={() => window.location = 'https://fb.com/djhiphop23'} circular color='facebook' icon="facebook"/>
                         </List.Item>
                         <List.Item>
-                            <Icon link="#" name="instagram" size="huge"/>
+                            <Button onClick={() => window.location = 'https://twitter.com/djhiphop23'} circular color='twitter' icon="twitter"/>
                         </List.Item>
                         <List.Item>
-                            <Icon link="#" name="twitter square" size="huge"/>
-                        </List.Item>
-                        <List.Item>
-                            <Icon link="#" name="reddit square" size="huge"/>
+                            <Button onClick={() => window.location = 'https://reddit.com/user/djhiphop23'} circular color='red' icon="reddit alien"/>
                         </List.Item>
                     </List>
                 </Segment>

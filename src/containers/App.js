@@ -37,7 +37,7 @@ class App extends Component {
                         <Route exact path="/gif/:id" render={() => <Gif/>}/>
                         <Route exact path="/login" render={() => <LogIn/>}/>
                         <Route exact path="/signup" render={() => <SignUp/>}/>
-                        <Route exact path="/user/:username" render={() => <UserProfile/>}/>
+                        <Route exact path="/user/:username" render={(props) => <UserProfile {...props} />}/>
                         <Route exact path="/settings" render={() => <Settings/>}/>
                         <Route exact path="/about" render={() => <About/>}/>
                         <Route exact path='/blog' component={() => window.location = 'https://mixgif.wordpress.com'}/>
