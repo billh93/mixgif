@@ -20,14 +20,7 @@ export default class NavBar extends Component {
                         </Dropdown.Item>
                     </Dropdown.Menu>
                 </Dropdown>
-                <Dropdown item text='Categories' name="Categories">
-                    <Dropdown.Menu>
-                        <Dropdown.Item>About</Dropdown.Item>
-                        <Dropdown.Item>Advertise</Dropdown.Item>
-                        <Dropdown.Item>Contact Us</Dropdown.Item>
-                    </Dropdown.Menu>
-                </Dropdown>
-
+                <Menu.Item as={Link} to='/categories' name="Categories" />
                 <Menu.Menu position='right'>
                     <Menu.Item>
                         <Input className='icon' icon='search' placeholder='Search...'/>
@@ -35,15 +28,15 @@ export default class NavBar extends Component {
                 </Menu.Menu>
                 <Dropdown item text='Bill'>
                     <Dropdown.Menu>
-                        <Dropdown.Item as={Link} to='/profile' text="Profile" />
+                        <Dropdown.Item as={Link} to='/user' text="Profile" />
                         <Dropdown.Item as={Link} to='/settings' text="Settings" />
                         <Dropdown.Item as={Link} to='/logout' text="Log Out" />
                     </Dropdown.Menu>
                 </Dropdown>
                 <Menu.Item>
                     <Button.Group>
-                        <Button color="blue">Sign Up</Button>
-                        <Button color="green">Log In</Button>
+                        <Button as={Link} to="/login" color="green" content="Log In" />
+                        <Button as={Link} to="/signup" color="blue" content="Sign Up" />
                     </Button.Group>
                 </Menu.Item>
             </Menu>

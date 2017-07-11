@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {Container, Message, Form, Button, Grid, Icon} from 'semantic-ui-react';
+import {Link} from 'react-router-dom';
 
 export default class SignUp extends Component {
     render() {
@@ -16,11 +17,12 @@ export default class SignUp extends Component {
                   <Form.Input label='Email Address' placeholder='Email Address' type='text' />
                   <Form.Input label='Username' placeholder='Username' type='text' />
                   <Form.Input label='Password' type='password' />
+                  <Form.Input label='Confirm Password' type='password' />
                   <Button color='blue'>Sign Up</Button>
                 </Form>
                 <Message attached='bottom' warning>
                   <Icon name='help' />
-                  Already signed up?&nbsp;<a href='#'>Login here</a>&nbsp;instead.
+                  Already signed up?&nbsp;<Link to="/login">Log In</Link>&nbsp;instead.
                 </Message>
             </Grid.Column>
             </Grid>

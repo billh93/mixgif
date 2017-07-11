@@ -7,6 +7,7 @@ import {
     Grid,
     Icon
 } from 'semantic-ui-react';
+import {Link} from 'react-router-dom';
 
 export default class LogIn extends Component {
     render() {
@@ -22,7 +23,7 @@ export default class LogIn extends Component {
                         </Form>
                         <Message attached='bottom' warning>
                             <Icon name='help'/>
-                            Forgot Your Password ?&nbsp;<a href='#'>Recover here</a>
+                            Forgot Your Password ?&nbsp;<Link to="/forgot-password">Recover here</Link>
                         </Message>
                     </Grid.Column>
                 </Grid>

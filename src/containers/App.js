@@ -38,7 +38,7 @@ class App extends Component {
                     <Route exact path="/user" render={() => <UserProfile/>}/>
                     <Route exact path="/settings" render={() => <Settings/>}/>
                     <Route exact path="/about" render={() => <About/>}/>
-                    <Route path='/blog' component={() => window.location = 'https://steemit.com'}/>
+                    <Route path='/blog' component={() => window.location = 'https://mixgif.wordpress.com'}/>
                     <Route exact path="/advertise" render={() => <Advertise/>}/>
                     <Route exact path="/privacy" render={() => <Privacy/>}/>
                     <Route exact path="/terms" render={() => <Terms/>}/>
